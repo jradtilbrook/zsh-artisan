@@ -10,8 +10,6 @@ This plugin adds an `artisan` shell command with the following features:
   within the project).
 * You can specify an editor to automatically open new files created by `artisan
   make:*` commands
-* It automatically runs artisan commands using `sail` when appropriate.
-* It will run commands using `docker compose` (or `docker-compose`) if a known container name is found.
 
 <p align="center">
     <img src="https://jessarcher.github.io/zsh-artisan/demo.svg?1">
@@ -124,12 +122,13 @@ alias tinker="artisan tinker"
 alias serve="artisan serve"
 ```
 
-Many more can be found at https://laravel-news.com/bash-aliases
+Many more can be found at <https://laravel-news.com/bash-aliases>
 
 ## Homestead Setup
 
-The Zsh Artisan plugin can be installed automatically with any new or provisioned Laravel Homestead instance. 
-In the root of your Homestead project, add the following to your `after.sh` file. 
+The Zsh Artisan plugin can be installed automatically with any new or provisioned Laravel Homestead instance.
+In the root of your Homestead project, add the following to your `after.sh` file.
+
 ```bash
 ARTISAN=/home/vagrant/.oh-my-zsh/custom/plugins/artisan
 if [ -d "$ARTISAN" ]; then
@@ -140,7 +139,8 @@ else
   source /home/vagrant/.zshrc
 fi
 ```
-*Note:* If you are re-provisioning your Homestead box, and already have other Zsh plugins defined in your Zsh config files, you wil need to adjust the `sed` command to includes those in the list. 
+
+*Note:* If you are re-provisioning your Homestead box, and already have other Zsh plugins defined in your Zsh config files, you wil need to adjust the `sed` command to includes those in the list.
 
 ## License
 
